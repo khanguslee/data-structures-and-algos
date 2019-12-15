@@ -26,9 +26,19 @@ class BST:
                 raise ValueError("Duplicate Value")
         return input_node
 
-    def search(self, input_value):
-        # TODO: Search for a value
-        pass
+    def __contains__(self, input_value):
+        return self._contains_recurse(self.root, input_value)
+
+    def _contains_recurse(self, input_node, input_value):
+        if input_node is None:
+            return False
+        elif input_node.value == input_value:
+            return True
+        elif input_value < input_node.value:
+            return self._contains_recurse(input_node.left, input_value)
+        elif input_value > input_node.value:
+            return self._contains_recurse(input_node.right, input_value)
+            
 
     def delete(self, input_value):
         # TODO: Delete value from tree
