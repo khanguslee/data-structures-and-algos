@@ -81,4 +81,8 @@ if __name__ == "__main__":
     binary_search_tree = BST(50)
     binary_search_tree.insert(70)
     binary_search_tree.insert(10)
+    binary_search_tree.insert(20)
+    binary_search_tree.insert(30)
+    binary_search_tree.insert(5)
+
     binary_search_tree.print_inorder()
