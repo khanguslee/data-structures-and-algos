@@ -54,6 +54,20 @@ class TestBST:
         actual_min = test_bst.find_min()
         assert actual_min == expected_min
 
+    def test_find_max(self):
+        # Generate test BST
+        test_value = 50
+        test_bst = BST(test_value)
+        test_bst.insert(60)
+        test_bst.insert(10)
+        test_bst.insert(20)
+        test_bst.insert(30)
+        test_bst.insert(5)
+
+        expected_max = 60
+        actual_max = test_bst.find_max()
+        assert actual_max == expected_max
+
     def test_print_inorder(self, capfd):
         # Generate test BST
         test_value = 50

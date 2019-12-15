@@ -50,6 +50,12 @@ class BST:
             current_node = current_node.left
         return current_node.value
 
+    def find_max(self):
+        current_node = self.root
+        while current_node.right is not None:
+            current_node = current_node.right
+        return current_node.value
+
     def print_inorder(self):
         output_array = []
         output_array = self._print_inorder_recurse(self.root, output_array)
