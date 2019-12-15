@@ -44,6 +44,12 @@ class BST:
         # TODO: Delete value from tree
         pass
 
+    def find_min(self):
+        current_node = self.root
+        while current_node.left is not None:
+            current_node = current_node.left
+        return current_node.value
+
     def print_inorder(self):
         output_array = []
         output_array = self._print_inorder_recurse(self.root, output_array)

@@ -40,6 +40,19 @@ class TestBST:
 
         assert (find_value in test_bst) == False
 
+    def test_find_min(self):
+        # Generate test BST
+        test_value = 50
+        test_bst = BST(test_value)
+        test_bst.insert(60)
+        test_bst.insert(10)
+        test_bst.insert(20)
+        test_bst.insert(30)
+        test_bst.insert(5)
+
+        expected_min = 5
+        actual_min = test_bst.find_min()
+        assert actual_min == expected_min
 
     def test_print_inorder(self, capfd):
         # Generate test BST
